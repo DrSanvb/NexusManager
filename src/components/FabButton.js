@@ -1,3 +1,4 @@
+/*
 import React,{Component} from 'react';
 import{View,Text,StyleSheet,TouchableWithoutFeedback,Animated,Button} from  'react-native';
 import {AntDesign,Entypo} from '@expo/vector-icons';
@@ -22,36 +23,35 @@ export default function(props) {
   
     return <MyBackButton {...props} navigation={navigation} />;
   }
-  
- class FabButton extends Component{
+  export default class FabButton extends Component{
     render(){ 
-        const { navigation } = this.props;
-       
-    
+      const { navigation } = this.props;
+        //const navigation = useNavigation();
         return(
             <View style={[styles.container, this.props.style]}>
                 <TouchableWithoutFeedback  onPress={() =>
-             navigation.navigate('adicionarProduto')}>
+                  navigation.navigate('telaAdicionarProduto')}>
+                 
                     <Animated.View style={[styles.button, styles.menu]}>
-                        <AntDesign name ="plus" size={24} color="#fff"/>
+                    <AntDesign name ="plus" size={24} color="#fff"/>
                     </Animated.View>
                 </TouchableWithoutFeedback>
               
-               
+                
             </View>
-//pq </TouchableWithoutFeedback> aparece o botao e </TouchableNativeFeedback> nao
+            //pq </TouchableWithoutFeedback> aparece o botao e </TouchableNativeFeedback> nao
         );
     }
-}
+  }
 
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
     container:{
         alignItems: 'center',
         position: 'absolute'
     },
     button:{
-        width:60,
-        position:'absolute',
+      width:60,
+      position:'absolute',
         height:60,
         borderRadius:60/2,
         justifyContent:'center',
@@ -59,13 +59,15 @@ const styles = StyleSheet.create({
         shadowColor:"#002138",
         shadowOpacity:0.3,
         shadowOffset:{
-            height:10,
+          height:10,
         }
-    },
-    menu:{
+      },
+      menu:{
         backgroundColor:'#00213b'
-    },
- 
-       
-});
-
+      },
+      
+      
+    });
+    
+    
+    */
